@@ -6,7 +6,7 @@ import MyComponent from './components/MyComponent'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<MyComponent />, document.getElementById('myComponent'))
+//ReactDOM.render(<MyComponent />, document.getElementById('myComponent'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
