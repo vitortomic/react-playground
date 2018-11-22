@@ -1,37 +1,31 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import MyComponent from './MyComponent.js'
+import HomePage from './HomePage.js';
 
 class Navigation extends Component {
     render() {
         return(
         <div>
-            {this.renderAbout()} 
             <div>
                 <Route path="/about" component={MyComponent}/>
+                <Route path="/home" component={HomePage}/>
             </div>
+            {this.renderNavigation()} 
         </div>)
     }
-    renderAbout() {
-        if(window.location.pathname != "/about") {
-            return( 
+    renderNavigation() {
+        return(
+            <div>
                 <nav>
                     <Link to="/about">about</Link>
                 </nav>
-            )
-        }
-        else {
-            return(
-            <nav>
-                <Link to="/">home</Link>
-            </nav>)
-        }
-    
+                <nav>
+                    <Link to="/home">home</Link>
+                </nav>
+            </div>
+        )
     }
   }
 
 export default Navigation;
-
-
-
-
