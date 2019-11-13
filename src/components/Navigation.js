@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import MyComponent from './MyComponent.js'
 import HomePage from './HomePage.js';
+import Frame from './Frame.js';
 
 class Navigation extends Component {
     render() {
@@ -10,6 +11,7 @@ class Navigation extends Component {
             <div>
                 <Route path="/about" component={MyComponent}/>
                 <Route path="/home" component={HomePage}/>
+                <Route path="/frame" component={Frame}/>
             </div>
             {this.renderNavigation()} 
         </div>)
